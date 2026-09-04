@@ -1,0 +1,3394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jitesh Chandra | Remote Sensing & GeoAI Researcher</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =====================================================
+           TRAINING & ACHIEVEMENTS - NEW LAYOUT
+        ====================================================== */
+
+        .training-subsection {
+            margin-top: 35px;
+        }
+
+        .training-subsection:first-of-type {
+            margin-top: 20px;
+        }
+
+        .training-subtitle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 25px;
+            font-family: "Raleway", sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .training-subtitle i {
+            font-size: 22px;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .certificate-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+        }
+
+        .certificate-image {
+            height: 220px;
+            background: #f5f7fa;
+            overflow: hidden;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .certificate-card:hover .certificate-image img {
+            transform: scale(1.03);
+        }
+
+        .certificate-content {
+            padding: 20px;
+        }
+
+        .certificate-content h4 {
+            margin: 0 0 10px;
+            font-family: "Raleway", sans-serif;
+            font-size: 18px;
+            line-height: 1.35;
+        }
+
+        .certificate-content p {
+            margin: 0 0 15px;
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .certificate-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 25px;
+        }
+
+        .achievement-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 22px;
+            padding: 28px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid currentColor;
+        }
+
+        .achievement-icon {
+            min-width: 58px;
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .achievement-content h4 {
+            margin: 0 0 8px;
+            font-family: "Raleway", sans-serif;
+            font-size: 21px;
+        }
+
+        .achievement-content .achievement-meta {
+            margin: 0 0 10px;
+            font-weight: 600;
+        }
+
+        .achievement-content p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1000px) {
+            .certificate-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+            .certificate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certificate-image {
+                height: 240px;
+            }
+
+            .achievement-card {
+                flex-direction: column;
+                padding: 22px;
+            }
+        }
+
+        /* =====================================================
+           GALLERY SLIDER - ONLY FOR GALLERY SECTION
+        ====================================================== */
+        .gallery-slider {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .gallery-slider-frame {
+            position: relative;
+            width: 100%;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #111827;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.14);
+        }
+
+        .gallery-slide {
+            position: relative;
+            width: 100%;
+            height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background: #111827;
+            transition: opacity 0.35s ease, transform 0.45s ease;
+        }
+
+        .gallery-slide .gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 45px 30px 24px;
+            color: #fff;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
+            text-align: left;
+        }
+
+        .gallery-slide .gallery-caption span {
+            display: inline-block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            opacity: 0.85;
+        }
+
+        .gallery-slide .gallery-caption h3 {
+            margin: 0 0 5px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .gallery-slide .gallery-caption p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            z-index: 5;
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.92);
+            color: #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            transition: all 0.25s ease;
+        }
+
+        .gallery-nav:hover {
+            transform: translateY(-50%) scale(1.08);
+            background: #fff;
+        }
+
+        .gallery-prev { left: 20px; }
+        .gallery-next { right: 20px; }
+
+        .gallery-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 22px;
+        }
+
+        .gallery-play-pause {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            min-width: 115px;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            background: #111827;
+            color: #fff;
+            transition: all 0.25s ease;
+        }
+
+        .gallery-play-pause:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .gallery-dot {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            background: #cbd5e1;
+            transition: all 0.25s ease;
+        }
+
+        .gallery-dot.active {
+            width: 26px;
+            border-radius: 10px;
+            background: #111827;
+        }
+
+        @media (max-width: 900px) {
+            .gallery-slider-frame,
+            .gallery-slide {
+                min-height: 520px;
+                height: 520px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-slider-frame,
+            .gallery-slide {
+                min-height: 420px;
+                height: 420px;
+                border-radius: 12px;
+            }
+
+            .gallery-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .gallery-prev { left: 10px; }
+            .gallery-next { right: 10px; }
+
+            .gallery-slide .gallery-caption {
+                padding: 35px 18px 16px;
+            }
+
+            .gallery-slide .gallery-caption h3 {
+                font-size: 17px;
+            }
+
+            .gallery-slide .gallery-caption p {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="sidebar">
+
+    <div class="profile">
+
+        <img
+            src="images/Jitesh_profile.png"
+            alt="Jitesh Chandra">
+
+        <h1>Jitesh Chandra</h1>
+
+
+        <!-- SOCIAL LINKS -->
+
+        <div class="social-links">
+
+            <!-- Google Scholar -->
+            <a
+                href="https://scholar.google.com/citations?user=O43fljwAAAAJ&hl=en&oi=ao"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Google Scholar">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a
+                href="https://www.linkedin.com/in/jitesh-chandra-77b2612ba/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+
+            <!-- GitHub -->
+            <a
+                href="https://github.com/Jiteshchandra-Spatial"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+
+            <!-- WhatsApp -->
+            <a
+                href="https://wa.me/918528694373"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+
+            <!-- Email -->
+            <a
+                href="mailto:jiteshspatial@gmail.com"
+                title="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <nav class="nav-menu">
+
+            <a href="#home" class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+
+            <a href="#about">
+                <i class="fa-regular fa-user"></i>
+                <span>About</span>
+            </a>
+
+
+            <a href="#resume">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>Resume</span>
+            </a>
+
+
+            <a href="#skills">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Skills</span>
+            </a>
+
+
+            <a href="#portfolio">
+                <i class="fa-regular fa-images"></i>
+                <span>Portfolio</span>
+            </a>
+
+
+            <a href="#services">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Services</span>
+            </a>
+
+
+            <a href="#research">
+                <i class="fa-solid fa-flask"></i>
+                <span>Research &amp; Publications</span>
+            </a>
+
+
+            <a href="#training">
+                <i class="fa-solid fa-award"></i>
+                <span>Training &amp; Achievements</span>
+            </a>
+
+
+            <a href="#gallery">
+                <i class="fa-regular fa-images"></i>
+                <span>Gallery</span>
+            </a>
+
+
+            <a href="#contact">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main class="main-content">
+
+
+
+<!-- =================================================
+     HOME
+================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h2>
+            Jitesh Chandra
+        </h2>
+
+
+        <p class="hero-role">
+            I'm a
+            <span id="typing-text"></span>
+        </p>
+
+
+        <p class="hero-description">
+            Geospatial researcher working with Earth observation,
+            Remote Sensing, GIS, GeoAI, environmental modelling
+            and disaster risk assessment.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="btn primary-btn">
+                Explore My Work
+            </a>
+
+
+            <a href="#contact" class="btn outline-btn">
+                Get In Touch
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     ABOUT
+================================================== -->
+
+<section id="about" class="section">
+
+    <div class="section-heading">
+
+        <h2>About</h2>
+
+        <span></span>
+
+        <p>
+            Jitesh Chandra is a
+            <strong>Remote Sensing &amp; GeoAI Researcher</strong>
+            with <strong>3+ years of experience</strong> in GIS,
+            Remote Sensing, Machine Learning, Google Earth Engine,
+            and Geospatial Analysis. He also works on
+            <strong>freelance geospatial projects</strong>,
+            delivering practical solutions for research and
+            real-world applications.
+        </p>
+
+    </div>
+
+
+
+    <div class="about-grid">
+
+        <div class="about-image">
+
+            <!-- <img
+                src="images/Jitesh_profile.png"
+                alt="Jitesh Chandra"> -->
+
+            <img
+                src="images/Jitesh_profile.png"
+                alt="Jitesh Chandra"
+                style="border-radius: 50%; aspect-ratio: 1/1; object-fit: cover;">    
+
+        </div>
+
+
+
+        <div class="about-content">
+
+            <!-- <h3>
+                GIS &amp; GeoAI Specialist • Hydrologist •
+                Remote Sensing &amp; WebGIS Developer
+            </h3> -->
+
+            <h3>
+                GIS &amp; GeoAI Specialist • Remote Sensing •
+                Hydrological Modelling • WebGIS
+            </h3>
+
+
+            <p class="about-lead">
+
+                <!-- <em>
+                    Specializing in Remote Sensing, GIS, Digital Mapping,
+                    GeoAI, Google Earth Engine, Machine Learning,
+                    LULC Analysis, and WebGIS. Proficient in
+                    industry-standard geospatial tools and committed
+                    to delivering accurate, reproducible, and
+                    data-driven solutions.
+                </em> -->
+
+                <em>
+                    Specializing in Remote Sensing, GIS, Digital Mapping,
+                    GeoAI, Google Earth Engine, Machine Learning,
+                    LULC Analysis, WebGIS, and Hydrological Modelling.
+                    Proficient in industry-standard geospatial tools
+                    and committed to delivering accurate, reproducible,
+                    and data-driven solutions.
+                </em>
+
+            </p>
+
+
+
+            <div class="about-details">
+
+                <div class="detail-column">
+
+                    <div class="detail-item">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <strong>Education:</strong>
+
+                        <span>
+                            M.Sc. Geoinformatics
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <strong>Date of Birth:</strong>
+
+                        <span>
+                            30 July 2003
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <strong>Location:</strong>
+
+                        <span>
+                            Varanasi, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="detail-column">
+
+                    <div class="detail-item">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <strong>Experience:</strong>
+
+                        <span>
+                            3+ Years
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <strong>Freelance:</strong>
+
+                        <span>
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <i class="fa-solid fa-satellite"></i>
+
+                        <strong>Focus:</strong>
+
+                        <span>
+                            Remote Sensing &amp; GeoAI
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <h3>Education:</h3>
+
+
+            <ul>
+
+                <li>
+                    <strong>Bachelor of Arts (B.A.) in Geography</strong>
+                    —
+                    63.83% | 2023
+                </li>
+
+
+                <li>
+                    <strong>M.Sc. in Geoinformatics</strong> —
+                    Central University of Jharkhand, Ranchi |
+                    <strong>CGPA: 9.20/10</strong> | 2025
+                </li>
+
+
+                <li>
+                    <strong>Master's Thesis:</strong>
+                    Spatiotemporal Analysis of Crop Yields Derived
+                    from Light Use Efficiency-Based GPP Model and
+                    Satellite Data for Assessing Food Security in
+                    Chandauli District
+                </li>
+
+
+                <li>
+                    <strong>Research Focus:</strong>
+                    Remote Sensing, GIS, GeoAI, Agricultural Monitoring,
+                    Crop Yield Analysis, and Hydrological Modelling.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     RESUME
+================================================== -->
+
+<section id="resume" class="section section-light">
+
+    <div class="section-heading">
+
+        <h2>Resume</h2>
+
+        <span></span>
+
+        <p>
+            My academic background and professional research
+            experience.
+        </p>
+
+    </div>
+
+
+    <div class="resume-grid">
+
+        <!-- EDUCATION -->
+
+        <div>
+
+            <h3 class="resume-title">
+                Education
+            </h3>
+
+
+            <div class="timeline-item">
+
+                <span class="timeline-dot"></span>
+
+                <h4>
+                    M.Sc. in Geoinformatics
+                </h4>
+
+
+                <span class="timeline-date">
+                    2023 – 2025
+                </span>
+
+
+                <p class="institution">
+                    Central University of Jharkhand
+                </p>
+
+
+                <p>
+                    Dissertation on spatiotemporal analysis
+                    of crop yields using a Light Use Efficiency
+                    based GPP model and satellite data for
+                    assessing food security in Chandauli,
+                    Uttar Pradesh.
+                </p>
+
+            </div>
+
+
+
+            <h3 class="resume-title">
+                Research Interests
+            </h3>
+
+
+            <ul class="research-list">
+
+                <!-- <li>
+                    GeoAI and Spatial Machine Learning
+                </li>
+
+                <li>
+                    Flood Forecasting and Risk Assessment
+                </li>
+
+                <li>
+                    Earth Observation
+                </li>
+
+                <li>
+                    Environmental Modelling
+                </li>
+
+                <li>
+                    Agricultural Monitoring
+                </li> -->
+
+
+
+                <li>
+                    GeoAI &amp; Spatial Machine Learning
+                </li>
+
+                <li>
+                    Remote Sensing &amp; Earth Observation
+                </li>
+
+                <li>
+                    Hydrological Modelling &amp; Flood Risk
+                </li>
+
+                <li>
+                    Agricultural Monitoring
+                </li>
+
+                <li>
+                    Environmental &amp; Land-Cover Modelling
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- EXPERIENCE -->
+
+        <div>
+
+            <h3 class="resume-title">
+                Professional Experience
+            </h3>
+
+
+            <div class="timeline-item">
+
+                <span class="timeline-dot"></span>
+
+                <h4>
+                    JRF-GATE / Geospatial Research
+                </h4>
+
+
+                <span class="timeline-date">
+                    Apr 2026 – Present
+                </span>
+
+
+                <p class="institution">
+                    Punjab Remote Sensing Centre, Ludhiana
+                </p>
+
+
+                <p>
+                    Working on disaster management and flood
+                    risk assessment using GIS, Remote Sensing
+                    and hydrodynamic modelling.
+                </p>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <span class="timeline-dot"></span>
+
+                <h4>
+                    Junior Research Fellow
+                </h4>
+
+
+                <span class="timeline-date">
+                    Oct 2025 – Mar 2026
+                </span>
+
+
+                <p class="institution">
+                    Punjab Remote Sensing Centre
+                </p>
+
+
+                <p>
+                    Worked on land-use and land-cover change
+                    analysis using satellite Earth observation
+                    and geospatial techniques.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     SKILLS
+================================================== -->
+
+<section id="skills" class="section">
+
+    <div class="section-heading">
+
+        <h2>Skills</h2>
+
+        <span></span>
+
+        <p>
+            Technical expertise in Remote Sensing, GIS, GeoAI,
+            Machine Learning, hydrological modelling, and
+            geospatial programming developed through research
+            and applied projects.
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Remote Sensing &amp; GIS</span>
+                <strong>95%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:95%"></div>
+            </div>
+
+            <p class="skill-tools">
+                ArcGIS Pro, ArcMap, QGIS, SNAP, ENVI,
+                ERDAS Imagine, Google Earth Pro
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Google Earth Engine</span>
+                <strong>92%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:92%"></div>
+            </div>
+
+            <p class="skill-tools">
+                JavaScript, Satellite Data Processing,
+                LULC Classification &amp; Earth Observation
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Machine Learning</span>
+                <strong>86%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:86%"></div>
+            </div>
+
+            <p class="skill-tools">
+                Random Forest, SVM, Decision Tree,
+                XGBoost, ANN, MLP
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Deep Learning &amp; GeoAI</span>
+                <strong>82%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:82%"></div>
+            </div>
+
+            <p class="skill-tools">
+                CNN, U-Net, DeepLabV3+, Semantic Segmentation,
+                Spatial AI &amp; Geospatial Modelling
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Python &amp; GIS Automation</span>
+                <strong>88%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:88%"></div>
+            </div>
+
+            <p class="skill-tools">
+                Python, OpenLayers, GIS Automation,
+                GeoAI, Spatial Analysis &amp; Data Processing
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Hydrological Modelling</span>
+                <strong>82%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:82%"></div>
+            </div>
+
+            <p class="skill-tools">
+                HEC-HMS, HEC-RAS, CropWat, AquaCrop
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Environmental Modelling</span>
+                <strong>80%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:80%"></div>
+            </div>
+
+            <p class="skill-tools">
+                RUSLE Model, TerrSet Modeler,
+                Land &amp; Environmental Analysis
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Photogrammetry &amp; 3D</span>
+                <strong>78%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:78%"></div>
+            </div>
+
+            <p class="skill-tools">
+                Agisoft Metashape, CloudCompare,
+                Photogrammetry &amp; 3D Point Cloud Processing
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>GNSS &amp; Survey Processing</span>
+                <strong>75%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:75%"></div>
+            </div>
+
+            <p class="skill-tools">
+                RTKLIB, GNSS Data Processing,
+                Coordinate &amp; Survey Data Analysis
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Spatial Database</span>
+                <strong>78%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:78%"></div>
+            </div>
+
+            <p class="skill-tools">
+                PostgreSQL, PostGIS,
+                Spatial Database Management
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Web GIS &amp; Web Development</span>
+                <strong>75%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:75%"></div>
+            </div>
+
+            <p class="skill-tools">
+                HTML, CSS, OpenLayers,
+                Interactive Maps &amp; WebGIS
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <span>Geospatial Modelling</span>
+                <strong>85%</strong>
+            </div>
+
+            <div class="progress">
+                <div style="width:85%"></div>
+            </div>
+
+            <p class="skill-tools">
+                LULC Change Analysis, Crop Mapping,
+                Flood Mapping, Spatial Modelling
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PORTFOLIO
+========================================================= -->
+
+<section id="portfolio" class="section section-light">
+
+    <div class="section-heading">
+        <h2>Portfolio</h2>
+        <span></span>
+        <p>
+            Selected projects in GIS, Hydrology, Remote Sensing,
+            WebGIS, Photogrammetry and GeoAI-driven spatial analysis.
+        </p>
+    </div>
+
+    <div class="portfolio-filters">
+        <button class="portfolio-filter active" data-filter="all">ALL</button>
+        <button class="portfolio-filter" data-filter="gis">GIS</button>
+        <button class="portfolio-filter" data-filter="remote-sensing">REMOTE SENSING</button>
+        <button class="portfolio-filter" data-filter="webgis">WEBGIS</button>
+        <button class="portfolio-filter" data-filter="hydrology">HYDROLOGY</button>
+        <button class="portfolio-filter" data-filter="geoai">GEOAI</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+        <!-- PROJECT 01 -->
+        <article class="portfolio-card" data-category="remote-sensing gis">
+            <div class="portfolio-image">
+                <img src="Project_image/P1_onset_2010.png" alt="Southwest Monsoon Georeferencing">
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">REMOTE SENSING &amp; GIS</span>
+                    <h3>Southwest Monsoon Georeferencing</h3>
+                    <p>ArcMap 10.8 • Image-to-Image Georeferencing • GIS</p>
+                    <button class="portfolio-view-btn" type="button" onclick="openProject('monsoon')">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 02 -->
+        <article class="portfolio-card" data-category="remote-sensing gis geoai">
+            <div class="portfolio-image">
+                <img src="Project_image/P2_LULC_2000.png" alt="Land Use Land Cover Classification and Change Detection">
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">REMOTE SENSING &amp; GIS</span>
+                    <h3>LULC Classification &amp; Change Detection</h3>
+                    <p>Multi-temporal LULC • GIS • Remote Sensing • Change Analysis</p>
+                    <button class="portfolio-view-btn" type="button" onclick="openProject('lulc')">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 03 -->
+        <article class="portfolio-card" data-category="remote-sensing agriculture gis">
+            <div class="portfolio-image">
+                <img src="Project_image/P3_RGB_FCC.png" alt="Crop and Agricultural Remote Sensing">
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">AGRICULTURE &amp; REMOTE SENSING</span>
+                    <h3>Crop Monitoring &amp; Classification</h3>
+                    <p>CWSI • Crop Classification • FCC • Agricultural Remote Sensing</p>
+                    <button class="portfolio-view-btn" type="button" onclick="openProject('crop')">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 04 -->
+        <article class="portfolio-card" data-category="gis hydrology remote-sensing">
+            <div class="portfolio-image">
+                <img src="Project_image/P4_AHP_Chohal.png" alt="Soil Erosion and Watershed Assessment">
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">ENVIRONMENT &amp; GIS</span>
+                    <h3>Soil Erosion &amp; Watershed Assessment</h3>
+                    <p>RUSLE • AHP • GIS • Soil Loss • Spatial Analysis</p>
+                    <button class="portfolio-view-btn" type="button" onclick="openProject('soil')">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 05 -->
+        <article class="portfolio-card" data-category="hydrology remote-sensing gis webgis">
+            <div class="portfolio-image">
+                <img src="Project_image/P5_flood_1.png" alt="Flood Inundation and Risk Assessment">
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">FLOOD &amp; DISASTER ASSESSMENT</span>
+                    <h3>Flood Inundation &amp; Risk Assessment</h3>
+                    <p>Flood Mapping • Remote Sensing • GIS • Risk Assessment</p>
+                    <button class="portfolio-view-btn" type="button" onclick="openProject('flood')">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+
+<!-- =========================================================
+     PROJECT DETAIL MODAL
+========================================================= -->
+
+<div id="projectModal"
+     class="project-modal">
+
+    <div class="project-modal-overlay"
+         onclick="closeProject()">
+    </div>
+
+
+    <div class="project-modal-content">
+
+        <button class="project-close"
+                onclick="closeProject()">
+            &times;
+        </button>
+
+
+        <div class="project-detail-layout">
+
+
+            <!-- =================================================
+                 PROJECT IMAGE SLIDER
+            ================================================== -->
+
+            <div class="project-detail-image">
+
+                <button
+                    class="project-image-nav project-prev"
+                    onclick="changeProjectImage(-1)"
+                    aria-label="Previous Image">
+
+                    <i class="fas fa-chevron-left"></i>
+
+                </button>
+
+
+                <img
+                    id="projectImage"
+                    src=""
+                    alt="Project Image">
+
+
+                <button
+                    class="project-image-nav project-next"
+                    onclick="changeProjectImage(1)"
+                    aria-label="Next Image">
+
+                    <i class="fas fa-chevron-right"></i>
+
+                </button>
+
+
+                <!-- IMAGE COUNTER -->
+
+                <div class="project-image-counter">
+
+                    <span id="projectImageCounter">1 / 1</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT INFORMATION
+            ================================================== -->
+
+            <div class="project-detail-right">
+
+
+                <div class="project-info-box">
+
+                    <h3>
+                        Project Information
+                    </h3>
+
+                    <div class="project-info-line"></div>
+
+
+                    <p>
+                        <strong>Category:</strong>
+                        <span id="projectCategory"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Client:</strong>
+                        <span id="projectClient"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Project Date:</strong>
+                        <span id="projectDate"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Tools:</strong>
+                        <span id="projectTools"></span>
+
+
+                </div>
+
+
+                <h2 id="projectTitle"></h2>
+
+
+                <p
+                    id="projectIntroduction"
+                    class="project-introduction">
+                </p>
+
+
+                <h3 class="project-subheading">
+                    Project Description
+                </h3>
+
+
+                <p id="projectDescription"></p>
+
+
+                <h3 class="project-subheading">
+                    Methodology
+                </h3>
+
+
+                <p id="projectMethodology"></p>
+
+
+                <h3 class="project-subheading">
+                    Key Outputs
+                </h3>
+
+
+                <ul
+                    id="projectOutputs"
+                    class="project-output-list">
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     PORTFOLIO JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   PORTFOLIO PROJECT SLIDER
+   Five projects - each project has its own image sequence.
+   Images are stored in: Project_image/
+========================================================= */
+
+let currentProject = null;
+let currentProjectImageIndex = 0;
+let projectAutoSlideTimer = null;
+const PROJECT_SLIDE_INTERVAL = 2000;
+
+const portfolioProjects = {
+
+    /* =====================================================
+       PROJECT 01 - SOUTHWEST MONSOON
+    ====================================================== */
+    monsoon: {
+        images: [
+            "Project_image/P1_onset_2010.png",
+            "Project_image/P1_onset_2024.png",
+            "Project_image/P1_withdrawal_2010.png",
+            "Project_image/P1_withdrawal_2024.png"
+        ],
+        category: "Remote Sensing & GIS",
+        client: "Researcher client – Hyderabad",
+        date: "2023",
+        tools: "ArcMap 10.8, GIS, Image-to-Image Georeferencing, Remote Sensing",
+        url: "#",
+        title: "Southwest Monsoon Georeferencing and Spatial Analysis",
+        introduction: "A GIS-based georeferencing project focused on accurately aligning historical Southwest Monsoon maps for comparative spatial analysis.",
+        description: "The project involved georeferencing Southwest Monsoon maps using the Image-to-Image Georeferencing technique in ArcMap 10.8. Historical map images were spatially aligned with a reference dataset to ensure accurate geographic positioning and facilitate comparison of monsoon patterns across different years.",
+        methodology: "Historical Southwest Monsoon maps were imported into ArcMap 10.8 and georeferenced using an image-to-image approach. Appropriate control points were identified between the source maps and the reference spatial dataset, followed by transformation and spatial alignment. The georeferenced outputs were checked for positional accuracy and prepared for further GIS-based analysis.",
+        outputs: [
+            "Georeferenced Southwest Monsoon maps",
+            "Image-to-image spatial alignment",
+            "Multi-year monsoon map dataset",
+            "Comparative monsoon maps",
+            "Spatially referenced historical map archive",
+            "GIS-ready datasets"
+        ]
+    },
+
+    /* =====================================================
+       PROJECT 02 - LULC
+    ====================================================== */
+    lulc: {
+        images: [
+            "Project_image/P2_LULC_2000.png",
+            "Project_image/P2_LULC_2010.png",
+            "Project_image/P2_LULC_2020.png",
+            "Project_image/P2_LULC_2025.png",
+            "Project_image/P2_Change_area.png",
+            "Project_image/P2_area_stats.png"
+        ],
+        category: "Remote Sensing & GIS",
+        client: "Researcher client -Ranchi",
+        date: "2025",
+        tools: "Landsat, Sentinel-2, Google Earth Engine, GIS, Machine Learning",
+        url: "#",
+        title: "Land Use Land Cover Classification & Change Detection",
+        introduction: "Multi-temporal LULC mapping and change analysis for assessing landscape transformation across 2000, 2010, 2020 and 2025.",
+        description: "The project evaluates land-use and land-cover changes across multiple time periods and presents the results through LULC maps, change-area analysis and class-wise area statistics.",
+        methodology: "Satellite imagery is pre-processed, relevant spectral and spatial features are prepared, LULC classes are mapped for each target year, and the classified outputs are compared to quantify land-cover change and area statistics.",
+        outputs: [
+            "LULC map for 2000",
+            "LULC map for 2010",
+            "LULC map for 2020",
+            "LULC map for 2025",
+            "LULC change-area analysis",
+            "Class-wise area statistics"
+        ]
+    },
+
+    /* =====================================================
+       PROJECT 03 - CROP / AGRICULTURE
+    ====================================================== */
+    crop: {
+        images: [
+            "Project_image/P3_RGB_FCC.png",
+            "Project_image/P3_Hoshiarpur_LULC.png",
+            "Project_image/P3_Potato_Classification_Final.png",
+            "Project_image/P3_CWSI_2.png",
+            "Project_image/P3_CWSI_1.png"
+        ],
+        category: "Agriculture & Remote Sensing",
+        client: "Researcher client - Ludhiana",
+        date: "2026",
+        tools: "Remote Sensing, GIS, CWSI, Crop Classification, FCC, Satellite Data",
+        url: "#",
+        title: "Crop Monitoring & Agricultural Remote Sensing",
+        introduction: "A multi-source agricultural remote sensing project combining crop condition assessment, land-cover mapping, crop classification and false-colour composite analysis.",
+        description: "The project demonstrates geospatial workflows for agricultural monitoring using crop water stress indicators, land-cover information, crop classification and RGB/FCC visual interpretation.",
+        methodology: "Satellite-derived products and GIS layers are processed to derive crop-related indicators and thematic maps. CWSI outputs, LULC information, crop classification results and false-colour composites are analysed to support agricultural assessment.",
+        outputs: [
+            "CWSI maps",
+            "Hoshiarpur LULC map",
+            "Potato classification map",
+            "RGB/FCC visualisation",
+            "Agricultural spatial analysis outputs"
+        ]
+    },
+
+    /* =====================================================
+       PROJECT 04 - SOIL EROSION / WATERSHED
+    ====================================================== */
+    soil: {
+        images: [
+            "Project_image/P4_AHP_Chohal.png",
+            "Project_image/P4_AHP_Damsal.png",
+            "Project_image/P4_AHP_Dholbaha.png",
+            "Project_image/P4_Chohal_RUSLE_1.png",
+            "Project_image/P4_Chohal_Soil_Loss.png",
+            "Project_image/P4_Damsal_RUSLE.png",
+            "Project_image/P4_Damsal_Soil_Loss.png",
+            "Project_image/P4_Dholbaha_RUSLE.png",
+            "Project_image/P4_Dholbaha_Soil_Loss.png"
+        ],
+        category: "Environmental GIS",
+        client: "Researcher client - Ludhiana",
+        date: "2026",
+        tools: "RUSLE, AHP, GIS, DEM, Remote Sensing",
+        url: "#",
+        title: "Soil Erosion & Watershed Assessment",
+        introduction: "A GIS-based assessment of soil erosion susceptibility and soil loss using RUSLE, AHP and spatial environmental datasets across selected watersheds.",
+        description: "The project integrates watershed-specific thematic information with GIS-based modelling to assess soil erosion and identify areas with higher erosion and soil-loss potential.",
+        methodology: "RUSLE factors and AHP-based thematic criteria are prepared from terrain, rainfall, soil, land-cover and related environmental datasets. The factors are combined in a GIS environment to generate erosion and soil-loss assessment outputs.",
+        outputs: [
+            "AHP-based watershed assessment",
+            "Chohal soil erosion and soil-loss maps",
+            "Damsal soil erosion and soil-loss maps",
+            "Dholbaha soil erosion and soil-loss maps",
+            "RUSLE-based spatial assessment",
+            "Priority erosion zones"
+        ]
+    },
+
+    /* =====================================================
+       PROJECT 05 - FLOOD
+    ====================================================== */
+    flood: {
+        images: [
+            "Project_image/P5_flood_1.png",
+            "Project_image/P5_flood_2.png",
+            "Project_image/P5_flood_3.png",
+            "Project_image/P5_flood_4.png",
+            "Project_image/P5_flood_5.png",
+            "Project_image/P5_flood_6.png",
+            "Project_image/P5_flood_7.png"
+        ],
+        category: "Flood Risk & Disaster Assessment",
+        client: "Researcher client - Punjab",
+        date: "2026",
+        tools: "Remote Sensing, GIS, Flood Mapping, Spatial Analysis, WebGIS",
+        url: "#",
+        title: "Flood Inundation & Risk Assessment",
+        introduction: "A geospatial flood assessment workflow combining remote sensing, GIS and spatial analysis for flood inundation mapping and risk assessment.",
+        description: "The project focuses on the preparation and visualisation of flood-related spatial outputs, including inundation information, thematic maps and analytical results for disaster risk assessment.",
+        methodology: "Satellite and GIS datasets are processed to identify inundated areas and derive supporting spatial indicators. The resulting layers are analysed and visualised to support flood assessment and disaster-management applications.",
+        outputs: [
+            "Flood inundation mapping",
+            "Flood-related spatial analysis",
+            "Risk assessment outputs",
+            "GIS-based disaster assessment maps",
+            "WebGIS / map visualisation outputs"
+        ]
+    }
+};
+
+
+/* =========================================================
+   PRELOAD PROJECT IMAGES
+========================================================= */
+function preloadProjectImages(project) {
+    if (!project || !Array.isArray(project.images)) return;
+
+    project.images.forEach(function(src) {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+
+/* =========================================================
+   UPDATE PROJECT IMAGE
+========================================================= */
+function updateProjectImage() {
+    if (!currentProject || !currentProject.images || currentProject.images.length === 0) return;
+
+    const image = document.getElementById("projectImage");
+    const counter = document.getElementById("projectImageCounter");
+
+    if (!image) return;
+
+    image.src = currentProject.images[currentProjectImageIndex];
+    image.alt = currentProject.title || "Project Image";
+
+    if (counter) {
+        counter.textContent =
+            (currentProjectImageIndex + 1) +
+            " / " +
+            currentProject.images.length;
+    }
+}
+
+
+/* =========================================================
+   START AUTOMATIC SLIDER
+========================================================= */
+function startProjectAutoSlide() {
+    stopProjectAutoSlide();
+
+    if (!currentProject || !currentProject.images || currentProject.images.length <= 1) return;
+
+    projectAutoSlideTimer = setInterval(function() {
+        if (currentProject) {
+            changeProjectImage(1, true);
+        }
+    }, PROJECT_SLIDE_INTERVAL);
+}
+
+
+/* =========================================================
+   STOP AUTOMATIC SLIDER
+========================================================= */
+function stopProjectAutoSlide() {
+    if (projectAutoSlideTimer !== null) {
+        clearInterval(projectAutoSlideTimer);
+        projectAutoSlideTimer = null;
+    }
+}
+
+
+/* =========================================================
+   OPEN PROJECT
+========================================================= */
+function openProject(projectID) {
+    const project = portfolioProjects[projectID];
+
+    if (!project) {
+        console.error("Project not found:", projectID);
+        return;
+    }
+
+    currentProject = project;
+    currentProjectImageIndex = 0;
+
+    preloadProjectImages(project);
+    updateProjectImage();
+
+    const category = document.getElementById("projectCategory");
+    const client = document.getElementById("projectClient");
+    const date = document.getElementById("projectDate");
+    const tools = document.getElementById("projectTools");
+    const title = document.getElementById("projectTitle");
+    const introduction = document.getElementById("projectIntroduction");
+    const description = document.getElementById("projectDescription");
+    const methodology = document.getElementById("projectMethodology");
+    const projectURL = document.getElementById("projectURL");
+    const outputList = document.getElementById("projectOutputs");
+    const modal = document.getElementById("projectModal");
+
+    if (category) category.textContent = project.category;
+    if (client) client.textContent = project.client;
+    if (date) date.textContent = project.date;
+    if (tools) tools.textContent = project.tools;
+    if (title) title.textContent = project.title;
+    if (introduction) introduction.textContent = project.introduction;
+    if (description) description.textContent = project.description;
+    if (methodology) methodology.textContent = project.methodology;
+
+    if (projectURL) {
+        projectURL.href = project.url || "#";
+    }
+
+    if (outputList) {
+        outputList.innerHTML = "";
+
+        project.outputs.forEach(function(output) {
+            const li = document.createElement("li");
+            li.textContent = output;
+            outputList.appendChild(li);
+        });
+    }
+
+    if (modal) {
+        modal.classList.add("active");
+    }
+
+    document.body.classList.add("portfolio-modal-open");
+
+    /* Start the slider AFTER the selected project is loaded. */
+    startProjectAutoSlide();
+}
+
+
+/* =========================================================
+   CHANGE PROJECT IMAGE
+   automatic = true when changed by timer
+========================================================= */
+function changeProjectImage(direction, automatic = false) {
+    if (!currentProject || !Array.isArray(currentProject.images) || currentProject.images.length === 0) return;
+
+    const totalImages = currentProject.images.length;
+
+    currentProjectImageIndex += direction;
+
+    if (currentProjectImageIndex >= totalImages) {
+        currentProjectImageIndex = 0;
+    }
+
+    if (currentProjectImageIndex < 0) {
+        currentProjectImageIndex = totalImages - 1;
+    }
+
+    updateProjectImage();
+
+    /* If the user manually clicks next/previous, restart the timer. */
+    if (!automatic) {
+        startProjectAutoSlide();
+    }
+}
+
+
+/* =========================================================
+   CLOSE PROJECT
+========================================================= */
+function closeProject() {
+    stopProjectAutoSlide();
+
+    const modal = document.getElementById("projectModal");
+
+    if (modal) {
+        modal.classList.remove("active");
+    }
+
+    document.body.classList.remove("portfolio-modal-open");
+
+    currentProject = null;
+    currentProjectImageIndex = 0;
+}
+
+
+/* =========================================================
+   KEYBOARD CONTROLS
+========================================================= */
+document.addEventListener("keydown", function(event) {
+    if (!currentProject) return;
+
+    if (event.key === "Escape") {
+        closeProject();
+        return;
+    }
+
+    if (event.key === "ArrowRight") {
+        changeProjectImage(1);
+    }
+
+    if (event.key === "ArrowLeft") {
+        changeProjectImage(-1);
+    }
+});
+
+
+/* =========================================================
+   PORTFOLIO FILTER
+========================================================= */
+const filterButtons = document.querySelectorAll(".portfolio-filter");
+const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+filterButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        filterButtons.forEach(function(btn) {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        portfolioCards.forEach(function(card) {
+            const categories = card.dataset.category || "";
+
+            if (filter === "all" || categories.includes(filter)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+</script>
+
+
+
+<!-- =================================================
+     SERVICES
+================================================== -->
+
+<section id="services" class="section">
+
+    <div class="section-heading">
+
+        <h2>Services</h2>
+
+        <span></span>
+
+        <p>
+            Geospatial and Earth observation services
+            based on my technical expertise.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    GIS Analysis
+                </h3>
+
+                <p>
+                    Spatial analysis, thematic mapping,
+                    geoprocessing and cartographic
+                    visualization.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-satellite"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Remote Sensing
+                </h3>
+
+                <p>
+                    Satellite image processing, LULC
+                    classification and Earth observation
+                    analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    GeoAI &amp; Machine Learning
+                </h3>
+
+                <p>
+                    Machine learning and deep learning
+                    for spatial prediction and
+                    environmental intelligence.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-water"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Flood Risk Assessment
+                </h3>
+
+                <p>
+                    Flood mapping, damage assessment,
+                    hydrodynamic modelling and spatial
+                    risk analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Agricultural Monitoring
+                </h3>
+
+                <p>
+                    Crop monitoring, vegetation dynamics,
+                    GPP modelling and satellite-based
+                    crop assessment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-mountain"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Environmental Modelling
+                </h3>
+
+                <p>
+                    Soil erosion assessment, RUSLE,
+                    susceptibility mapping and
+                    environmental change analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESEARCH & PUBLICATIONS
+========================================================= -->
+
+<section id="research" class="section section-light">
+
+    <div class="section-heading">
+
+        <h2>Research &amp; Publications</h2>
+
+        <span></span>
+
+        <p>
+            Research interests, scientific work and
+            publication activities in Remote Sensing,
+            GIS, GeoAI and environmental applications.
+        </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-satellite"></i>
+
+            <h3>
+                Earth Observation
+            </h3>
+
+            <p>
+                Satellite-based monitoring of land,
+                vegetation, agriculture and environmental
+                change using multi-temporal Earth
+                observation datasets.
+            </p>
+
+        </div>
+
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>
+                GeoAI &amp; Machine Learning
+            </h3>
+
+            <p>
+                Machine learning and deep learning approaches
+                for spatial classification, prediction,
+                environmental modelling and geospatial
+                intelligence.
+            </p>
+
+        </div>
+
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-house-flood-water"></i>
+
+            <h3>
+                Flood Risk &amp; Disaster Assessment
+            </h3>
+
+            <p>
+                Flood inundation mapping, flood hotspot
+                analysis, hydrodynamic modelling and
+                disaster risk assessment using GIS and
+                satellite data.
+            </p>
+
+        </div>
+
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <h3>
+                Environmental Modelling
+            </h3>
+
+            <p>
+                Soil erosion assessment, vegetation dynamics,
+                environmental hazards and ecosystem
+                monitoring using geospatial modelling.
+            </p>
+
+        </div>
+
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-wheat-awn"></i>
+
+            <h3>
+                Agricultural Monitoring
+            </h3>
+
+            <p>
+                Crop monitoring, GPP modelling, crop yield
+                analysis, vegetation productivity and
+                food-security applications.
+            </p>
+
+        </div>
+
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+                Spatial Data Science
+            </h3>
+
+            <p>
+                Python-based geospatial workflows,
+                statistical analysis, spatial modelling
+                and scientific visualization.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="publication-list">
+
+    <h3 class="resume-title">
+        Publications
+    </h3>
+
+
+    <!-- ================= PUBLISHED ================= -->
+
+    <div class="publication-group">
+
+        <h4 class="publication-status published-status">
+            PUBLISHED
+        </h4>
+
+
+        <!-- PUBLICATION 01 -->
+        <article class="publication-item">
+
+            <span class="publication-dot"></span>
+
+            <h4>
+                Modeling Wheat Yields Using Vegetation Photosynthesis
+                Model Through Remote Sensing Satellite Data in
+                Chandauli District, Eastern Uttar Pradesh (India)
+            </h4>
+
+            <p class="publication-journal">
+                <em>International Journal of Plant Production</em>
+                · 2026 · 20 · 67
+            </p>
+
+            <p class="publication-authors">
+                Parida, B.R., Chandra, J., &amp; Swain, S.K.
+            </p>
+
+            <p class="publication-doi">
+                DOI:
+                <a href="https://doi.org/10.1007/s42106-026-00451-w"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    10.1007/s42106-026-00451-w
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </p>
+
+        </article>
+
+
+        <!-- PUBLICATION 02 -->
+        <article class="publication-item">
+
+            <span class="publication-dot"></span>
+
+            <h4>
+                Evaluating ENSO–Vegetation Interactions and Variability
+                Using Remote Sensing-Derived Vegetation Indices and
+                Principal Component Analysis
+            </h4>
+
+            <p class="publication-journal">
+                <em>Frontiers in Earth Science</em>
+                · 2026 · 14 · 1901756
+            </p>
+
+            <p class="publication-authors">
+                Parida, B. R., Chandra, J., &amp; Swain, S. K.
+            </p>
+
+            <p class="publication-doi">
+                DOI:
+                <a href="https://doi.org/10.3389/feart.2026.1901756"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    10.3389/feart.2026.1901756
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= UNDER REVIEW ================= -->
+
+    <div class="publication-group">
+
+        <h4 class="publication-status review-status">
+            UNDER REVIEW
+        </h4>
+
+
+        <!-- UNDER REVIEW 01 -->
+        <article class="publication-item">
+
+            <span class="publication-dot review-dot"></span>
+
+            <h4>
+                Deep Learning–Based Sea–Land Segmentation and
+                Multi-Temporal Shoreline Change Analysis Using
+                Landsat Imagery: A Case Study of Mousuni Island, India
+            </h4>
+
+        </article>
+
+
+        <!-- UNDER REVIEW 02 -->
+        <article class="publication-item">
+
+            <span class="publication-dot review-dot"></span>
+
+            <h4>
+                Geospatial Analysis of Urban Sprawl, Ecological
+                Transformation and Urban Heat Island Dynamics in
+                Bhubaneswar, India
+            </h4>
+
+        </article>
+
+
+        <!-- UNDER REVIEW 03 -->
+        <article class="publication-item">
+
+            <span class="publication-dot review-dot"></span>
+
+            <h4>
+                Hybrid SAR and Optical Remote Sensing Framework for
+                Flood Inundation Mapping and Crop Damage Severity
+                Evaluation Using Geospatial Intelligence
+            </h4>
+
+        </article>
+
+    </div>
+
+</div>
+
+<!-- ================= ABSTRACT PRESENTATIONS ================= -->
+
+<div class="abstract-presentations">
+
+    <h4 class="publication-status abstract-status">
+        ABSTRACT PRESENTATIONS
+    </h4>
+
+
+    <div class="abstract-grid">
+
+
+        <!-- ABSTRACT 01 -->
+        <article class="abstract-card">
+
+            <div class="abstract-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+
+            <div class="abstract-content">
+
+                <h4>
+                    CUJ GISRS 2026 Conference Abstract
+                </h4>
+
+                <p>
+                    Conference abstract presented at CUJ GISRS 2026.
+                </p>
+
+                <a
+                    href="Abstract/CUJ GISRS2026 Conference Abstract.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    View Abstract
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ABSTRACT 02 -->
+        <article class="abstract-card">
+
+            <div class="abstract-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+
+            <div class="abstract-content">
+
+                <h4>
+                    ICWSS 2026
+                </h4>
+
+                <p>
+                    Conference abstract submitted/presented at ICWSS 2026.
+                </p>
+
+                <a
+                    href="Abstract/ICWSS_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    View Abstract
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ABSTRACT 03 -->
+        <article class="abstract-card">
+
+            <div class="abstract-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+
+            <div class="abstract-content">
+
+                <h4>
+                    ISRS Abstract
+                </h4>
+
+                <p>
+                    Research abstract prepared for the ISRS conference.
+                </p>
+
+                <a
+                    href="Abstract/ISRS_Jitesh_abstract.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    View Abstract
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    
+
+        <!-- ABSTRACT 04 -->
+        <article class="abstract-card">
+
+            <div class="abstract-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <div class="abstract-content">
+
+                <h4>
+                    WOSC Book of Abstracts
+                </h4>
+
+                <p>
+                    Research abstract included in the WOSC Book of Abstracts.
+                </p>
+
+                <a
+                    href="Abstract/WOSC_Book_of_Abstracts.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    View Abstract
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TRAINING & ACHIEVEMENTS
+========================================================= -->
+
+<section id="training" class="section">
+
+    <div class="section-heading">
+
+        <h2>Training &amp; Achievements</h2>
+
+        <span></span>
+
+        <p>
+            Professional training certificates, technical development
+            and academic achievements in geospatial science.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         TRAINING
+    ====================================================== -->
+
+    <div class="training-subsection">
+
+        <h3 class="training-subtitle">
+            <i class="fa-solid fa-certificate"></i>
+            Training
+        </h3>
+
+
+        <div class="certificate-grid">
+
+
+            <!-- TRAINING 01 -->
+            <article class="certificate-card">
+
+                <a
+                    class="certificate-image"
+                    href="Training_image/Advanced_surveying_resistivitymeter.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View certificate">
+
+                    <img
+                        src="Training_image/Advanced_surveying_resistivitymeter.png"
+                        alt="Advanced Surveying and Resistivity Meter Training Certificate"
+                        loading="lazy">
+
+                </a>
+
+                <div class="certificate-content">
+
+                    <h4>Advanced Surveying &amp; Resistivity Meter</h4>
+
+                    <p>
+                        Technical training focused on advanced surveying
+                        methods and resistivity-meter based geophysical
+                        data acquisition and field applications.
+                    </p>
+
+                    <a
+                        class="certificate-link"
+                        href="Training_image/Advanced_surveying_resistivitymeter.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRAINING 02 -->
+            <article class="certificate-card">
+
+                <a
+                    class="certificate-image"
+                    href="Training_image/GNSS_Training_IIT_Kanpur.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View certificate">
+
+                    <img
+                        src="Training_image/GNSS_Training_IIT_Kanpur.png"
+                        alt="GNSS Training IIT Kanpur Certificate"
+                        loading="lazy">
+
+                </a>
+
+                <div class="certificate-content">
+
+                    <h4>GNSS Training</h4>
+
+                    <p>
+                        Practical training in Global Navigation Satellite
+                        System (GNSS) concepts, positioning, field data
+                        collection and geospatial applications.
+                    </p>
+
+                    <a
+                        class="certificate-link"
+                        href="Training_image/GNSS_Training_IIT_Kanpur.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRAINING 03 -->
+            <article class="certificate-card">
+
+                <a
+                    class="certificate-image"
+                    href="Training_image/Grace_Hackweek_IIT_Kanpur.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View certificate">
+
+                    <img
+                        src="Training_image/Grace_Hackweek_IIT_Kanpur.png"
+                        alt="GRACE Hackweek IIT Kanpur Certificate"
+                        loading="lazy">
+
+                </a>
+
+                <div class="certificate-content">
+
+                    <h4>GRACE Hackweek</h4>
+
+                    <p>
+                        Technical learning and hands-on development related
+                        to GRACE satellite data, Earth observation and
+                        geospatial analysis.
+                    </p>
+
+                    <a
+                        class="certificate-link"
+                        href="Training_image/Grace_Hackweek_IIT_Kanpur.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRAINING 04 -->
+            <article class="certificate-card">
+
+                <a
+                    class="certificate-image"
+                    href="Training_image/ISRO_Lidar_certificate.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View certificate">
+
+                    <img
+                        src="Training_image/ISRO_Lidar_certificate.png"
+                        alt="ISRO LiDAR Training Certificate"
+                        loading="lazy">
+
+                </a>
+
+                <div class="certificate-content">
+
+                    <h4>LiDAR Training</h4>
+
+                    <p>
+                        Training related to LiDAR technology, remote sensing
+                        data and geospatial applications for Earth observation
+                        and spatial analysis.
+                    </p>
+
+                    <a
+                        class="certificate-link"
+                        href="Training_image/ISRO_Lidar_certificate.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRAINING 05 -->
+            <article class="certificate-card">
+
+                <a
+                    class="certificate-image"
+                    href="Training_image/RRU_Forest_Fire.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View certificate">
+
+                    <img
+                        src="Training_image/RRU_Forest_Fire.png"
+                        alt="Forest Fire Training Certificate"
+                        loading="lazy">
+
+                </a>
+
+                <div class="certificate-content">
+
+                    <h4>Forest Fire &amp; Geospatial Applications</h4>
+
+                    <p>
+                        Training related to forest-fire assessment and the
+                        use of geospatial technologies for environmental
+                        monitoring and hazard analysis.
+                    </p>
+
+                    <a
+                        class="certificate-link"
+                        href="Training_image/RRU_Forest_Fire.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRAINING 06 -->
+            <article class="certificate-card">
+
+                <a
+                    class="certificate-image"
+                    href="Training_image/SAR_Data_training.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View certificate">
+
+                    <img
+                        src="Training_image/SAR_Data_training.png"
+                        alt="SAR Data Training Certificate"
+                        loading="lazy">
+
+                </a>
+
+                <div class="certificate-content">
+
+                    <h4>SAR Data Training</h4>
+
+                    <p>
+                        Training in Synthetic Aperture Radar (SAR) data,
+                        satellite image interpretation and applications
+                        in Remote Sensing and geospatial analysis.
+                    </p>
+
+                    <a
+                        class="certificate-link"
+                        href="Training_image/SAR_Data_training.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        View Certificate
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ACHIEVEMENTS
+    ====================================================== -->
+
+    <div class="training-subsection">
+
+        <h3 class="training-subtitle">
+            <i class="fa-solid fa-trophy"></i>
+            Achievements
+        </h3>
+
+
+        <div class="achievement-grid">
+
+            <article class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <div class="achievement-content">
+
+                    <h4>GATE 2026 Qualified – Geomatics Engineering</h4>
+
+                    <p class="achievement-meta">
+                        Graduate Aptitude Test in Engineering (GATE) 2026
+                    </p>
+
+                    <p>
+                        Qualified GATE 2026 in <strong>Geomatics Engineering</strong>,
+                        conducted by <strong>Indian Institute of Technology Guwahati
+                        (IIT Guwahati)</strong>.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+<section id="gallery" class="section section-light">
+
+    <div class="section-heading">
+        <h2>Gallery</h2>
+        <span></span>
+        <p>
+            Selected moments, field activities, training events,
+            presentations and professional experiences in geospatial science.
+        </p>
+    </div>
+
+    <!-- GALLERY SLIDER -->
+    <div class="gallery-slider" aria-label="Photo Gallery">
+
+        <div class="gallery-slider-frame">
+
+            <button class="gallery-nav gallery-prev" type="button"
+                    onclick="changeGallerySlide(-1)"
+                    aria-label="Previous gallery image"
+                    title="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="gallery-slide">
+                <img id="galleryImage"
+                     src="Gallery_image/1.png"
+                     alt="Gallery Image 1">
+
+                <div class="gallery-caption">
+                    <span id="galleryCounter">01 / 10</span>
+                    <h3 id="galleryTitle">Professional &amp; Geospatial Activities</h3>
+                    <p id="galleryDescription">Selected moments from academic, training and professional activities.</p>
+                </div>
+            </div>
+
+            <button class="gallery-nav gallery-next" type="button"
+                    onclick="changeGallerySlide(1)"
+                    aria-label="Next gallery image"
+                    title="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+        <!-- PLAY / PAUSE CONTROLS -->
+        <div class="gallery-controls">
+            <button id="galleryPlayPause"
+                    class="gallery-play-pause"
+                    type="button"
+                    onclick="toggleGalleryAutoSlide()"
+                    aria-label="Pause automatic slideshow"
+                    title="Pause slideshow">
+                <i class="fa-solid fa-pause"></i>
+                <span>Pause</span>
+            </button>
+        </div>
+
+        <!-- SLIDE INDICATORS -->
+        <div id="galleryDots" class="gallery-dots" aria-label="Gallery slide navigation"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     CONTACT
+================================================== -->
+
+<section id="contact" class="section">
+
+    <div class="section-heading">
+
+        <h2>Contact</h2>
+
+        <span></span>
+
+        <p>
+            Interested in research collaboration,
+            PhD opportunities or geospatial projects?
+            Feel free to get in touch.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-info">
+
+
+            <div class="contact-card location-card">
+
+    <div class="contact-icon">
+        <i class="fa-solid fa-location-dot"></i>
+    </div>
+
+    <div class="location-content">
+
+        <h3>
+            Location
+        </h3>
+
+        <p>
+            India
+        </p>
+
+        <div class="google-map">
+
+            <div class="google-map">
+
+    <iframe
+        src="https://www.google.com/maps?q=Varanasi,Uttar+Pradesh,India&output=embed"
+        width="100%"
+        height="250"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+    <a href="mailto:jiteshspatial@gmail.com">
+        jiteshspatial@gmail.com
+    </a>
+</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
+                    <p>
+    <a
+        href="https://www.linkedin.com/in/jitesh-chandra-77b2612ba/"
+        target="_blank"
+        rel="noopener noreferrer">
+        linkedin.com/in/jitesh-chandra-77b2612ba/
+    </a>
+</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+    <a
+        href="https://wa.me/+91-8528694373"
+        target="_blank"
+        rel="noopener noreferrer">
+        Available for project enquiries
+    </a>
+</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <form
+            class="contact-form"
+            onsubmit="return false;">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Your Name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Your Email">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Subject
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Subject">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    rows="7"
+                    placeholder="Write your message..."></textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="btn primary-btn">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer class="footer">
+
+    <p>
+        © 2026
+        <strong>Jitesh Chandra</strong>.
+        All Rights Reserved.
+    </p>
+
+
+    <p>
+        Remote Sensing • GIS • GeoAI • Environmental Modelling
+    </p>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- JavaScript -->
+<!-- =========================================================
+     GALLERY SLIDER JAVASCRIPT - ONLY FOR GALLERY SECTION
+========================================================= -->
+<script>
+    const galleryImages = [
+        "Gallery_image/1.png",
+        "Gallery_image/2.png",
+        "Gallery_image/3.png",
+        "Gallery_image/4.png",
+        "Gallery_image/5.png",
+        "Gallery_image/6.png",
+        "Gallery_image/7.png",
+        "Gallery_image/8.png",
+        "Gallery_image/9.png",
+        "Gallery_image/10.png",
+        "Gallery_image/11.png"
+    ];
+
+   const galleryInfo = [
+
+    {
+        title: "Conference Participation",
+        description: "Participation in professional conferences focused on geospatial science, Earth observation and emerging developments in geospatial technology."
+    },
+
+    {
+        title: "Workshop & Technical Learning",
+        description: "Participation in a technical workshop involving practical learning, knowledge exchange and hands-on exposure to geospatial technologies."
+    },
+
+    {
+        title: "Geospatial Conference",
+        description: "Engagement in a professional geospatial conference, connecting with researchers, professionals and fellow participants through knowledge sharing and networking."
+    },
+
+    {
+        title: "Conference & Professional Networking",
+        description: "Participation in a geospatial conference, providing opportunities for professional interaction, networking and learning from the geospatial community."
+    },
+
+    {
+        title: "Award & Recognition Moment",
+        description: "A memorable moment of recognition and achievement, celebrating academic and professional contributions in the field of geospatial science."
+    },
+
+    {
+        title: "Geospatial Technology Presentation",
+        description: "Presenting technical and academic work related to geospatial technology, GIS and Remote Sensing in an academic or professional setting."
+    },
+
+    {
+        title: "Research Presentation",
+        description: "Sharing research and technical insights through an academic presentation, with a focus on geospatial applications, Remote Sensing and spatial analysis."
+    },
+
+    {
+        title: "Drone-Based Field Survey",
+        description: "Practical field survey experience using drone technology for data acquisition, mapping and geospatial analysis."
+    },
+
+    {
+        title: "Special Lecture on Geospatial Technology",
+        description: "Delivering a special lecture on geospatial technology, sharing knowledge and practical insights with students and participants."
+    },
+
+    {
+        title: "Special Lecture & Knowledge Sharing",
+        description: "Delivering a special lecture on geospatial technology and sharing academic and professional experiences with learners and the wider geospatial community."
+    },
+    {
+    title: "WOSC Networking & Interaction",
+    description: "Engaging in networking and knowledge-sharing interactions with participants during WOSC, exchanging ideas, experiences, and perspectives within the geospatial community."
+}
+
+];
+
+    let currentGalleryIndex = 0;
+    let galleryAutoSlideTimer = null;
+    let galleryIsPlaying = true;
+    const GALLERY_SLIDE_INTERVAL = 5000;
+
+    function updateGallerySlide() {
+        const image = document.getElementById("galleryImage");
+        const counter = document.getElementById("galleryCounter");
+        const title = document.getElementById("galleryTitle");
+        const description = document.getElementById("galleryDescription");
+
+        if (!image) return;
+
+        image.style.opacity = "0.25";
+
+        setTimeout(function () {
+            image.src = galleryImages[currentGalleryIndex];
+            image.alt = galleryInfo[currentGalleryIndex].title;
+
+            if (counter) {
+                counter.textContent =
+                    String(currentGalleryIndex + 1).padStart(2, "0") +
+                    " / " +
+                    String(galleryImages.length).padStart(2, "0");
+            }
+
+            if (title) title.textContent = galleryInfo[currentGalleryIndex].title;
+            if (description) description.textContent = galleryInfo[currentGalleryIndex].description;
+
+            image.style.opacity = "1";
+        }, 120);
+
+        updateGalleryDots();
+    }
+
+    function changeGallerySlide(direction, automatic = false) {
+        currentGalleryIndex += direction;
+
+        if (currentGalleryIndex >= galleryImages.length) currentGalleryIndex = 0;
+        if (currentGalleryIndex < 0) currentGalleryIndex = galleryImages.length - 1;
+
+        updateGallerySlide();
+
+        if (!automatic && galleryIsPlaying) startGalleryAutoSlide();
+    }
+
+    function startGalleryAutoSlide() {
+        stopGalleryAutoSlide();
+        if (!galleryIsPlaying || galleryImages.length <= 1) return;
+
+        galleryAutoSlideTimer = setInterval(function () {
+            changeGallerySlide(1, true);
+        }, GALLERY_SLIDE_INTERVAL);
+    }
+
+    function stopGalleryAutoSlide() {
+        if (galleryAutoSlideTimer !== null) {
+            clearInterval(galleryAutoSlideTimer);
+            galleryAutoSlideTimer = null;
+        }
+    }
+
+    function toggleGalleryAutoSlide() {
+        const button = document.getElementById("galleryPlayPause");
+        galleryIsPlaying = !galleryIsPlaying;
+
+        if (galleryIsPlaying) startGalleryAutoSlide();
+        else stopGalleryAutoSlide();
+
+        updateGalleryPlayPauseButton(button);
+    }
+
+    function updateGalleryPlayPauseButton(button) {
+        if (!button) return;
+
+        if (galleryIsPlaying) {
+            button.innerHTML = '<i class="fa-solid fa-pause"></i><span>Pause</span>';
+            button.setAttribute("aria-label", "Pause automatic slideshow");
+            button.setAttribute("title", "Pause slideshow");
+        } else {
+            button.innerHTML = '<i class="fa-solid fa-play"></i><span>Play</span>';
+            button.setAttribute("aria-label", "Play automatic slideshow");
+            button.setAttribute("title", "Play slideshow");
+        }
+    }
+
+    function createGalleryDots() {
+        const dotsContainer = document.getElementById("galleryDots");
+        if (!dotsContainer) return;
+
+        dotsContainer.innerHTML = "";
+
+        galleryImages.forEach(function (_, index) {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.className = "gallery-dot";
+            dot.setAttribute("aria-label", "Go to gallery image " + (index + 1));
+
+            dot.addEventListener("click", function () {
+                currentGalleryIndex = index;
+                updateGallerySlide();
+                if (galleryIsPlaying) startGalleryAutoSlide();
+            });
+
+            dotsContainer.appendChild(dot);
+        });
+
+        updateGalleryDots();
+    }
+
+    function updateGalleryDots() {
+        const dots = document.querySelectorAll(".gallery-dot");
+        dots.forEach(function (dot, index) {
+            dot.classList.toggle("active", index === currentGalleryIndex);
+        });
+    }
+
+    function preloadGalleryImages() {
+        galleryImages.forEach(function (src) {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        createGalleryDots();
+        preloadGalleryImages();
+        updateGallerySlide();
+        updateGalleryPlayPauseButton(document.getElementById("galleryPlayPause"));
+        startGalleryAutoSlide();
+    });
+
+    document.addEventListener("keydown", function (event) {
+        const gallery = document.getElementById("gallery");
+        if (!gallery) return;
+
+        const rect = gallery.getBoundingClientRect();
+        const galleryIsVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (!galleryIsVisible) return;
+
+        if (event.key === "ArrowRight") {
+            changeGallerySlide(1);
+        } else if (event.key === "ArrowLeft") {
+            changeGallerySlide(-1);
+        } else if (event.key === " ") {
+            event.preventDefault();
+            toggleGalleryAutoSlide();
+        }
+    });
+</script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
